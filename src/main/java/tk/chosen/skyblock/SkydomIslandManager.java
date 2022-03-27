@@ -3,14 +3,13 @@ package tk.chosen.skyblock;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.inventory.*;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.checkerframework.checker.units.qual.N;
+import tk.chosen.skyblock.Metrics.Metrics;
 import tk.chosen.skyblock.Settings.*;
-
-import javax.naming.Name;
+import tk.chosen.skyblock.Tips.SynthesisCommand;
 
 public final class SkydomIslandManager extends JavaPlugin {
 
@@ -21,6 +20,9 @@ public final class SkydomIslandManager extends JavaPlugin {
         this.saveDefaultConfig();
         this.reloadConfig();
         SkydomIslandManager instance = this;
+        getCommand("tips").setExecutor((CommandExecutor) new SynthesisCommand()); //新增指令
+        int pluginId = 14293; // 接入统计系统
+        Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
         if (this.getConfig().getBoolean("FirstSapling")) {
             try {
                 new FirstSapling();
