@@ -6,7 +6,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.*;
 import org.bukkit.plugin.java.JavaPlugin;
 import tk.chosen.skyblock.Tips.Synthesis;
-import tk.chosen.skyblock.metrics.Metrics;
+import tk.chosen.skyblock.Metrics.Metrics;
 import tk.chosen.skyblock.Settings.*;
 
 public final class SkydomIslandManager extends JavaPlugin {
