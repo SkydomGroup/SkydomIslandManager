@@ -3,26 +3,16 @@ package tk.chosen.skyblock;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.inventory.*;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import tk.chosen.skyblock.Metrics.Metrics;
+import tk.chosen.skyblock.Tips.Synthesis;
+import tk.chosen.skyblock.metrics.Metrics;
 import tk.chosen.skyblock.Settings.*;
-import tk.chosen.skyblock.Tips.SynthesisCommand;
 
 public final class SkydomIslandManager extends JavaPlugin {
-
-    public static Plugin instance;
-
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
-        this.reloadConfig();
-        SkydomIslandManager instance = this;
-        getCommand("tips").setExecutor((CommandExecutor) new SynthesisCommand()); //新增指令
-        int pluginId = 14293; // 接入统计系统
-        Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
         if (this.getConfig().getBoolean("FirstSapling")) {
             try {
                 new FirstSapling();
@@ -276,6 +266,9 @@ public final class SkydomIslandManager extends JavaPlugin {
             FLINTRecipe.addIngredient(1,Material.WOODEN_SHOVEL);
             Bukkit.addRecipe(FLINTRecipe);
             // 燧石
+            Bukkit.getPluginManager().registerEvents(new Synthesis(), this);
+            int pluginId = 14293; // 接入统计系统
+            Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
         }
     }
 

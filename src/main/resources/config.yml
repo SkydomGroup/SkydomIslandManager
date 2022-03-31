@@ -10,3 +10,4 @@ SlimeChunkCommand: true
 ElderGuardianSpawner: true
 ShulkerRespawn: true
 MoreRecipe: true
+SynthesisCommand: true

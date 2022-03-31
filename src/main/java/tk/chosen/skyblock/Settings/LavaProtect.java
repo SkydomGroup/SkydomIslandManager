@@ -1,6 +1,7 @@
 package tk.chosen.skyblock.Settings;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -27,5 +28,6 @@ public class LavaProtect implements Listener {
 
         event.getClickedBlock().setType(Material.LAVA);
         event.setCancelled(true);
+        event.getPlayer().sendMessage(ChatColor.AQUA + "§l已经将黑曜石变成岩浆，下次小心点！");
     }
 }
