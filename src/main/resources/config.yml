@@ -11,3 +11,5 @@ ElderGuardianSpawner: true
 ShulkerRespawn: true
 MoreRecipe: true
 SynthesisCommand: true
+BanBat: true
+Synthesis: true

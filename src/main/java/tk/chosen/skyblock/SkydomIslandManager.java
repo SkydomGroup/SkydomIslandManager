@@ -266,7 +266,12 @@ public final class SkydomIslandManager extends JavaPlugin {
             FLINTRecipe.addIngredient(1,Material.WOODEN_SHOVEL);
             Bukkit.addRecipe(FLINTRecipe);
             // 燧石
-            Bukkit.getPluginManager().registerEvents(new Synthesis(), this);
+            if (this.getConfig().getBoolean("Synthesis")) {
+                Bukkit.getPluginManager().registerEvents(new Synthesis(), this);
+            }
+            if (this.getConfig().getBoolean("BanBat")) {
+                Bukkit.getPluginManager().registerEvents(new BanBat(), this);
+            }
             int pluginId = 14293; // 接入统计系统
             Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
         }
