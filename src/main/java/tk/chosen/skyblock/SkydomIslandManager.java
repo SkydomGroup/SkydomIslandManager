@@ -151,7 +151,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             SmithingRecipe Purpur_block = new SmithingRecipe(
                 new NamespacedKey(this, "purpur_block_recipe"),
                 new ItemStack(Material.PURPUR_BLOCK),
-                new RecipeChoice.MaterialChoice(Material.END_STONE),
+                new RecipeChoice.MaterialChoice(Material.STONE),
                 new RecipeChoice.MaterialChoice(Material.SHULKER_BOX)
             );
             Bukkit.addRecipe(Purpur_block);

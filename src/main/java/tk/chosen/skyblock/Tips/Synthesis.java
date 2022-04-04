@@ -8,6 +8,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 public class Synthesis implements Listener {
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent event){
+        try {
+            Thread.currentThread().sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         event.getPlayer().sendMessage(ChatColor.AQUA + "§lHello," + event.getPlayer().getName() + "!");
         event.getPlayer().sendMessage(ChatColor.AQUA + "§l欢迎加入服务器，我们新增了一些自定义合成表");
         event.getPlayer().sendMessage(ChatColor.AQUA + "§l您可以在我们的Wiki找到");
