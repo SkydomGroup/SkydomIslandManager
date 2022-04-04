@@ -1,6 +1,7 @@
 package tk.chosen.skyblock.Settings;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -37,5 +38,6 @@ public class HungerKeeper implements Listener {
                 player.setSaturation(hunger.getValue());
             }, 3L);
         }
+        e.getPlayer().sendMessage(ChatColor.AQUA + "§l死亡是无法回复饱食度的哦！");
     }
 }
