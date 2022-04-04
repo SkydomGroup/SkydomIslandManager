@@ -228,6 +228,24 @@ public final class SkydomIslandManager extends JavaPlugin {
             );
             Bukkit.addRecipe(DIAMOND);
             // 钻石
+            BlastingRecipe Sand = new BlastingRecipe(
+                new NamespacedKey(this, "sand_recipe"),
+                new ItemStack(Material.SAND),
+                Material.GRAVEL,
+                (float) 0.8,
+                100
+            );
+            Bukkit.addRecipe(Sand);
+            // 沙子
+            BlastingRecipe Quartz = new BlastingRecipe(
+                new NamespacedKey(this, "Quartz_recipe"),
+                new ItemStack(Material.QUARTZ),
+                Material.GLASS,
+                (float) 0.8,
+                100
+            );
+            Bukkit.addRecipe(Quartz);
+            // 石英
             SmokingRecipe SoulSoil = new SmokingRecipe(
                 new NamespacedKey(this, "SoulSoil_recipe"),
                 new ItemStack(Material.SOUL_SOIL),
@@ -237,6 +255,15 @@ public final class SkydomIslandManager extends JavaPlugin {
             );
             Bukkit.addRecipe(SoulSoil);
             // 灵魂土
+            SmokingRecipe Netherrack = new SmokingRecipe(
+                new NamespacedKey(this, "Netherrack_recipe"),
+                new ItemStack(Material.NETHERRACK),
+                Material.COBBLESTONE,
+                (float) 1.2,
+                200
+            );
+            Bukkit.addRecipe(Netherrack);
+            // 下界岩
             StonecuttingRecipe SoulSand = new StonecuttingRecipe(
                  new NamespacedKey(this, "SoulSand_recipe"),
                  new ItemStack(Material.SOUL_SAND),
@@ -270,7 +297,7 @@ public final class SkydomIslandManager extends JavaPlugin {
                 Bukkit.getPluginManager().registerEvents(new Synthesis(), this);
             }
             if (this.getConfig().getBoolean("BanBat")) {
-                Bukkit.getPluginManager().registerEvents(new BanBat(), this);
+                Bukkit.getPluginManager().registerEvents(new DeleteSomeCreatures(), this);
             }
             int pluginId = 14293; // 接入统计系统
             Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
