@@ -181,15 +181,6 @@ public final class SkydomIslandManager extends JavaPlugin {
             );
             Bukkit.addRecipe(COPPER_INGOT);
             // 铜锭
-            FurnaceRecipe gravel = new FurnaceRecipe(
-                new NamespacedKey(this, "gravel_recipe"),
-                new ItemStack(Material.GRAVEL),
-                Material.COBBLESTONE,
-                (float) 0.2,
-                180
-            );
-            // 沙砾 熔炉
-            Bukkit.addRecipe(gravel);
             StonecuttingRecipe GravelStonecuttingRecipe = new StonecuttingRecipe(
                 new NamespacedKey(this, "GravelStonecuttingRecipe_recipe"),
                 new ItemStack(Material.GRAVEL),
