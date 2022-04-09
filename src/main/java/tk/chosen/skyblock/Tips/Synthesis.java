@@ -9,7 +9,7 @@ public class Synthesis implements Listener {
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent event){
         try {
-            Thread.currentThread().sleep(10000);
+            Thread.currentThread().sleep(10); // 等待10毫秒
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -18,6 +18,7 @@ public class Synthesis implements Listener {
         event.getPlayer().sendMessage(ChatColor.AQUA + "§l您可以在我们的Wiki找到");
         event.getPlayer().sendMessage(ChatColor.AQUA + "§lhttps://Wiki.Skydom.net.cn/" + "        点击链接打开");
         event.getPlayer().sendMessage(ChatColor.AQUA + "§l如果您是新玩家，请输入/is创建属于你自己的岛屿");
-        // event.getPlayer().sendMessage(ChatColor.AQUA + "§l如果您想要再次显示这个信息，请输入/tips 1");
+        event.getPlayer().sendMessage(ChatColor.AQUA + "§l如果您想要再次显示这个信息，请输入/Tips 1");
+        // 发送消息
     }
 }

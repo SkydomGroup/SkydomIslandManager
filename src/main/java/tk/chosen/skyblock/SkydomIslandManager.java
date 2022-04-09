@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import tk.chosen.skyblock.Tips.Synthesis;
 import tk.chosen.skyblock.Metrics.Metrics;
 import tk.chosen.skyblock.Settings.*;
+import tk.chosen.skyblock.Tips.SynthesisCommand;
 
 public final class SkydomIslandManager extends JavaPlugin {
     @Override
@@ -292,6 +293,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             }
             int pluginId = 14293; // 接入统计系统
             Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
+            Bukkit.getPluginCommand("Tips").setExecutor(new SynthesisCommand());
         }
     }
 

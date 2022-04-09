@@ -10,3 +10,5 @@ commands:
     permission: SkydomIslandManager.slime
     permission-message: You do not have permission.
     default: op
+  Tips:
+    usage: /Tips
