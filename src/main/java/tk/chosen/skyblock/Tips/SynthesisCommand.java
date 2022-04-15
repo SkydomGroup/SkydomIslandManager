@@ -4,13 +4,11 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SynthesisCommand implements onTabComplete {
     @Override
-    @ParametersAreNonnullByDefault
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==0){
             sender.sendMessage(ChatColor.AQUA + "你输入的指令好像有问题哎，快快输入/Tips help查看帮助吧！");
@@ -34,16 +32,16 @@ public class SynthesisCommand implements onTabComplete {
             }
             return true;
         }
-        return true;
+        return false;
     }
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         if(args.length==1)
         {
-            List<String> SynthesisCommandList = new ArrayList<>();
-            SynthesisCommandList.add ("1");
-            SynthesisCommandList.add ("help");
-            return SynthesisCommandList;
+            List<String> list = new ArrayList<>();
+            list.add ("1");
+            list.add ("help");
+            return list;
         }
         return null;
     }
