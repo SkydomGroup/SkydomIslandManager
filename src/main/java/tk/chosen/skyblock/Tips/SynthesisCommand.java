@@ -2,12 +2,13 @@ package tk.chosen.skyblock.Tips;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.ArrayList;
+import java.util.List;
 
-public class SynthesisCommand implements CommandExecutor {
+public class SynthesisCommand implements onTabComplete {
     @Override
     @ParametersAreNonnullByDefault
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -35,6 +36,16 @@ public class SynthesisCommand implements CommandExecutor {
         }
         return true;
     }
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        if(args.length==1)
+        {
+            List<String> SynthesisCommandList = new ArrayList<>();
+            SynthesisCommandList.add ("1");
+            SynthesisCommandList.add ("help");
+            return SynthesisCommandList;
+        }
+        return null;
+    }
 }
-
-// 暂未完善
+// Tips
