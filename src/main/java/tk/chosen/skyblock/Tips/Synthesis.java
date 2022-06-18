@@ -9,7 +9,7 @@ public class Synthesis implements Listener {
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent event){
         try {
-            Thread.currentThread().sleep(10); // 等待10毫秒
+            Thread.currentThread().sleep(1); // 等待1毫秒
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
