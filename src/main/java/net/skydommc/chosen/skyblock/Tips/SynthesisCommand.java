@@ -20,7 +20,7 @@ public class SynthesisCommand implements CommandExecutor, TabCompleter {
             String arg_to_string=args[0];
             if (arg_to_string.equals("1")){
                 sender.sendMessage(ChatColor.AQUA + "§lHello," + sender.getName() + "!");
-                sender.sendMessage(ChatColor.AQUA + "§l我们新增了一些自定义合成表");;
+                sender.sendMessage(ChatColor.AQUA + "§l我们新增了一些自定义合成表");
                 sender.sendMessage(ChatColor.AQUA + "§l您可以在我们的Wiki找到");
                 sender.sendMessage(ChatColor.AQUA + "§lhttps://Wiki.Skydom.org/" + "        点击链接打开");
                 sender.sendMessage(ChatColor.AQUA + "§l如果您是新玩家，请输入/is创建属于你自己的岛屿");

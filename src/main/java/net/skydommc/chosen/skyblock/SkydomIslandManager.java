@@ -10,6 +10,8 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public final class SkydomIslandManager extends JavaPlugin {
     @Override
     public void onEnable() {
@@ -182,13 +184,13 @@ public final class SkydomIslandManager extends JavaPlugin {
             );
             Bukkit.addRecipe(Gold_COPPER);
             // 金锭 铜锭
-            SmithingRecipe Gold_NETHER_INGOT = new SmithingRecipe(
-                    new NamespacedKey(this, "Goldd_recipe"),
+            SmithingRecipe Gold_NETHER_INGOT_A = new SmithingRecipe(
+                    new NamespacedKey(this, "Gold_NETHER_INGOT_recipe"),
                     new ItemStack(Material.GOLD_INGOT),
                     new RecipeChoice.MaterialChoice(Material.NETHERITE_INGOT),
                     new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
             );
-            Bukkit.addRecipe(Gold_NETHER_INGOT);
+            Bukkit.addRecipe(Gold_NETHER_INGOT_A);
             // 金锭 下界合金锭
             SmithingRecipe Gold_NETHER = new SmithingRecipe(
                     new NamespacedKey(this, "Goldc_recipe"),
@@ -265,10 +267,10 @@ public final class SkydomIslandManager extends JavaPlugin {
             ItemStack DIAMOND = new ItemStack(Material.DIAMOND);
             NamespacedKey DIAMONDkey = new NamespacedKey(this, "DIAMOND_key");
             ShapedRecipe DIAMONDrecipe = new ShapedRecipe(DIAMONDkey, DIAMOND);
-            Podzalrecipe.shape(" G ", "NBN", " G ");
-            Podzalrecipe.setIngredient('G', Material.GOLDEN_APPLE);
-            Podzalrecipe.setIngredient('N', Material.NETHERITE_INGOT);
-            Podzalrecipe.setIngredient('B', Material.BONE_BLOCK);
+            DIAMONDrecipe.shape(" G ", "NBN", " G ");
+            DIAMONDrecipe.setIngredient('G', Material.GOLDEN_APPLE);
+            DIAMONDrecipe.setIngredient('N', Material.NETHERITE_INGOT);
+            DIAMONDrecipe.setIngredient('B', Material.BONE_BLOCK);
             Bukkit.addRecipe(DIAMONDrecipe);
             // 钻石
             BlastingRecipe Sand = new BlastingRecipe(
@@ -341,13 +343,13 @@ public final class SkydomIslandManager extends JavaPlugin {
             // 紫水晶碎片
             ItemStack BLAZE_ROD_SHARD = new ItemStack(Material.BLAZE_ROD);
             NamespacedKey BLAZE_ROD_SHARD_KEY = new NamespacedKey(this, "BLAZE_ROD_KEY");
-            ShapelessRecipe BLAZE_RODRecipe = new ShapelessRecipe(BLAZE_ROD_SHARD_KEY, BLAZE_ROD_SHARD);
-            BLAZE_RODRecipe.addIngredient(Material.BLAZE_POWDER);
-            BLAZE_RODRecipe.addIngredient(Material.BLAZE_POWDER);
-            Bukkit.addRecipe(BLAZE_RODRecipe);
+            ShapelessRecipe BLAZE_ROD_Recipe = new ShapelessRecipe(BLAZE_ROD_SHARD_KEY, BLAZE_ROD_SHARD);
+            BLAZE_ROD_Recipe.addIngredient(Material.BLAZE_POWDER);
+            BLAZE_ROD_Recipe.addIngredient(Material.BLAZE_POWDER);
+            Bukkit.addRecipe(BLAZE_ROD_Recipe);
             // 烈焰棒
             ItemStack COAL = new ItemStack(Material.COAL);
-            NamespacedKey COAL_KEY = new NamespacedKey(this, "COLA_KEY");
+            NamespacedKey COAL_KEY = new NamespacedKey(this, "COAL_KEY");
             ShapelessRecipe COALRecipe = new ShapelessRecipe(COAL_KEY, COAL);
             COALRecipe.addIngredient(Material.CHARCOAL);
             Bukkit.addRecipe(COALRecipe);
@@ -361,13 +363,17 @@ public final class SkydomIslandManager extends JavaPlugin {
             // 燧石
             if (this.getConfig().getBoolean("Synthesis")) {
                 Bukkit.getPluginManager().registerEvents(new Synthesis(), this);
+                getLogger().info("Register Synthesis Success");
             }
             if (this.getConfig().getBoolean("BanBat")) {
                 Bukkit.getPluginManager().registerEvents(new DeleteSomeCreatures(), this);
+                getLogger().info("Register DeleteSomeCreatures Success");
             }
             int pluginId = 14293; // 接入统计系统
             Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
-            Bukkit.getPluginCommand("Tips").setExecutor(new SynthesisCommand());
+            getLogger().info("Metrics Success");
+            Objects.requireNonNull(Bukkit.getPluginCommand("Tips")).setExecutor(new SynthesisCommand());
+            Objects.requireNonNull(Bukkit.getPluginCommand("Tips")).setTabCompleter(new SynthesisCommand());
         }
     }
 
