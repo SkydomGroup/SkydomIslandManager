@@ -126,7 +126,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.resetRecipes();
             // 重置合成配方
             SmithingRecipe Iron_NETHER = new SmithingRecipe(
-                new NamespacedKey(this, "Iron1_recipe"),
+                new NamespacedKey(this, "Ironj_recipe"),
                 new ItemStack(Material.IRON_INGOT),
                 new RecipeChoice.MaterialChoice(Material.NETHER_BRICK),
                 new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
@@ -143,7 +143,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Iron_NUGGET);
             // 铁粒 骨头
             SmithingRecipe Iron_GOLD = new SmithingRecipe(
-                    new NamespacedKey(this, "Iron2_recipe"),
+                    new NamespacedKey(this, "Ironi_recipe"),
                     new ItemStack(Material.IRON_INGOT),
                     new RecipeChoice.MaterialChoice(Material.GOLD_INGOT),
                     new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
@@ -151,7 +151,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Iron_GOLD);
             // 铁锭 金锭
             SmithingRecipe Iron_NETHER_INGOT = new SmithingRecipe(
-                    new NamespacedKey(this, "Iron3_recipe"),
+                    new NamespacedKey(this, "Ironh_recipe"),
                     new ItemStack(Material.IRON_INGOT),
                     new RecipeChoice.MaterialChoice(Material.NETHERITE_INGOT),
                     new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
@@ -159,7 +159,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Iron_NETHER_INGOT);
             // 铁锭 下界合金锭
             SmithingRecipe Iron_COPPER = new SmithingRecipe(
-                    new NamespacedKey(this, "Iron4_recipe"),
+                    new NamespacedKey(this, "Irong_recipe"),
                     new ItemStack(Material.IRON_INGOT),
                     new RecipeChoice.MaterialChoice(Material.COPPER_INGOT),
                     new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
@@ -167,7 +167,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Iron_COPPER);
             // 铁锭 铜锭
             SmithingRecipe Gold_IRON = new SmithingRecipe(
-                new NamespacedKey(this, "Gold1_recipe"),
+                new NamespacedKey(this, "Goldf_recipe"),
                 new ItemStack(Material.GOLD_INGOT),
                 new RecipeChoice.MaterialChoice(Material.IRON_INGOT),
                 new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
@@ -175,7 +175,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Gold_IRON);
             // 金锭 铁锭
             SmithingRecipe Gold_COPPER = new SmithingRecipe(
-                    new NamespacedKey(this, "Gold2_recipe"),
+                    new NamespacedKey(this, "Golde_recipe"),
                     new ItemStack(Material.GOLD_INGOT),
                     new RecipeChoice.MaterialChoice(Material.COPPER_INGOT),
                     new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
@@ -183,7 +183,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Gold_COPPER);
             // 金锭 铜锭
             SmithingRecipe Gold_NETHER_INGOT = new SmithingRecipe(
-                    new NamespacedKey(this, "Gold3_recipe"),
+                    new NamespacedKey(this, "Goldd_recipe"),
                     new ItemStack(Material.GOLD_INGOT),
                     new RecipeChoice.MaterialChoice(Material.NETHERITE_INGOT),
                     new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
@@ -191,7 +191,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Gold_NETHER_INGOT);
             // 金锭 下界合金锭
             SmithingRecipe Gold_NETHER = new SmithingRecipe(
-                    new NamespacedKey(this, "Gold4_recipe"),
+                    new NamespacedKey(this, "Goldc_recipe"),
                     new ItemStack(Material.GOLD_INGOT),
                     new RecipeChoice.MaterialChoice(Material.NETHER_BRICK),
                     new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
@@ -216,7 +216,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Podzalrecipe);
             // 灰化土
             SmithingRecipe Nether_INGOT_GOLD = new SmithingRecipe(
-                new NamespacedKey(this, "Nether1_INGOT_recipe"),
+                new NamespacedKey(this, "Netherb_INGOT_recipe"),
                 new ItemStack(Material.NETHERITE_INGOT),
                 new RecipeChoice.MaterialChoice(Material.GOLD_INGOT),
                 new RecipeChoice.MaterialChoice(Material.BLACK_DYE)
@@ -224,7 +224,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Nether_INGOT_GOLD);
             // 下界合金锭 金锭
             SmithingRecipe Nether_INGOT_Iron = new SmithingRecipe(
-                    new NamespacedKey(this, "Nether2_INGOT_recipe"),
+                    new NamespacedKey(this, "Nethera_INGOT_recipe"),
                     new ItemStack(Material.NETHERITE_INGOT),
                     new RecipeChoice.MaterialChoice(Material.IRON_INGOT),
                     new RecipeChoice.MaterialChoice(Material.BLACK_DYE)
