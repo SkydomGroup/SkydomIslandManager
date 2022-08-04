@@ -1,7 +1,7 @@
 name: SkydomIslandManager
 version: '${project.version}'
-main: tk.chosen.skyblock.SkydomIslandManager
-api-version: 1.18
+main: net.skydommc.chosen.skyblock.SkydomIslandManager
+api-version: 1.19
 authors: [Chosen, SkydomAdminGroup]
 commands:
   Slime:
