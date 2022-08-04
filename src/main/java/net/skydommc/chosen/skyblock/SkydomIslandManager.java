@@ -281,7 +281,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Sand);
             // 沙子
             BlastingRecipe BLAZE_POWDER = new BlastingRecipe(
-                    new NamespacedKey(this, "sand_recipe"),
+                    new NamespacedKey(this, "BLAZE_POWDER_recipe"),
                     new ItemStack(Material.BLAZE_POWDER),
                     Material.REDSTONE,
                     (float) 0.8,
