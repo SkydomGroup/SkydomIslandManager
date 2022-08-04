@@ -123,15 +123,16 @@ public final class SkydomIslandManager extends JavaPlugin {
         if (this.getConfig().getBoolean("MoreRecipe")) {
             // 自定义合成表
             this.getLogger().info("Enabled MoreRecipe.");
-            Bukkit.resetRecipes(); // 重置合成配方
-            SmithingRecipe Iron = new SmithingRecipe(
+            Bukkit.resetRecipes();
+            // 重置合成配方
+            SmithingRecipe Iron_NETHER = new SmithingRecipe(
                 new NamespacedKey(this, "Iron_recipe"),
                 new ItemStack(Material.IRON_INGOT),
                 new RecipeChoice.MaterialChoice(Material.NETHER_BRICK),
                 new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
             );
-            Bukkit.addRecipe(Iron);
-            // 铁锭
+            Bukkit.addRecipe(Iron_NETHER);
+            // 铁锭 下界砖
             CampfireRecipe Iron_NUGGET = new CampfireRecipe(
                 new NamespacedKey(this, "iron_nugget_recipe"),
                 new ItemStack(Material.IRON_NUGGET),
@@ -140,7 +141,31 @@ public final class SkydomIslandManager extends JavaPlugin {
                 300
             );
             Bukkit.addRecipe(Iron_NUGGET);
-            // 铁粒
+            // 铁粒 骨头
+            SmithingRecipe Iron_GOLD = new SmithingRecipe(
+                    new NamespacedKey(this, "Iron_recipe"),
+                    new ItemStack(Material.IRON_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.GOLD_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
+            );
+            Bukkit.addRecipe(Iron_GOLD);
+            // 铁锭 金锭
+            SmithingRecipe Iron_NETHER_INGOT = new SmithingRecipe(
+                    new NamespacedKey(this, "Iron_recipe"),
+                    new ItemStack(Material.IRON_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.NETHERITE_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
+            );
+            Bukkit.addRecipe(Iron_NETHER_INGOT);
+            // 铁锭 下界合金锭
+            SmithingRecipe Iron_COPPER = new SmithingRecipe(
+                    new NamespacedKey(this, "Iron_recipe"),
+                    new ItemStack(Material.IRON_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.COPPER_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
+            );
+            Bukkit.addRecipe(Iron_COPPER);
+            // 铁锭 铜锭
             SmithingRecipe Gold = new SmithingRecipe(
                 new NamespacedKey(this, "Gold_recipe"),
                 new ItemStack(Material.GOLD_INGOT),
