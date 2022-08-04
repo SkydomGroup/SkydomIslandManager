@@ -1,4 +1,4 @@
-package tk.chosen.skyblock.Settings;
+package net.skydommc.chosen.skyblock.Settings;
 
 import com.destroystokyo.paper.event.entity.EntityAddToWorldEvent;
 import org.bukkit.*;
@@ -18,7 +18,7 @@ import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.spigotmc.event.entity.EntityDismountEvent;
-import tk.chosen.skyblock.SkydomIslandManager;
+import net.skydommc.chosen.skyblock.SkydomIslandManager;
 
 import java.util.HashMap;
 import java.util.Map;

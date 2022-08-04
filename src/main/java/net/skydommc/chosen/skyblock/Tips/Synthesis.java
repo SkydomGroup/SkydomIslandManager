@@ -1,4 +1,4 @@
-package tk.chosen.skyblock.Tips;
+package net.skydommc.chosen.skyblock.Tips;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;

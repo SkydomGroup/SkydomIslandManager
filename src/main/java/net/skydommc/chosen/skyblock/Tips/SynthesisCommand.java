@@ -1,13 +1,15 @@
-package tk.chosen.skyblock.Tips;
+package net.skydommc.chosen.skyblock.Tips;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SynthesisCommand implements onTabComplete {
+public class SynthesisCommand implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==0){

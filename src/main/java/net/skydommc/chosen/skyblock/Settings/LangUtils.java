@@ -1,4 +1,4 @@
-package tk.chosen.skyblock.Settings;
+package net.skydommc.chosen.skyblock.Settings;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

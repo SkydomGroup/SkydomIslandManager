@@ -1,4 +1,4 @@
-package tk.chosen.skyblock.Settings;
+package net.skydommc.chosen.skyblock.Settings;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -9,7 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import tk.chosen.skyblock.SkydomIslandManager;
+import net.skydommc.chosen.skyblock.SkydomIslandManager;
 
 public class ElderGuardianSpawner implements Listener {
     public ElderGuardianSpawner() {

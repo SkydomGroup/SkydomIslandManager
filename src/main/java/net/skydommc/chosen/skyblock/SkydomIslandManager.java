@@ -1,14 +1,14 @@
-package tk.chosen.skyblock;
+package net.skydommc.chosen.skyblock;
 
+import net.skydommc.chosen.skyblock.Metrics.Metrics;
+import net.skydommc.chosen.skyblock.Settings.*;
+import net.skydommc.chosen.skyblock.Tips.Synthesis;
+import net.skydommc.chosen.skyblock.Tips.SynthesisCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.*;
 import org.bukkit.plugin.java.JavaPlugin;
-import tk.chosen.skyblock.Tips.Synthesis;
-import tk.chosen.skyblock.Metrics.Metrics;
-import tk.chosen.skyblock.Settings.*;
-import tk.chosen.skyblock.Tips.SynthesisCommand;
 
 public final class SkydomIslandManager extends JavaPlugin {
     @Override
@@ -126,7 +126,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.resetRecipes();
             // 重置合成配方
             SmithingRecipe Iron_NETHER = new SmithingRecipe(
-                new NamespacedKey(this, "Iron_recipe"),
+                new NamespacedKey(this, "Iron1_recipe"),
                 new ItemStack(Material.IRON_INGOT),
                 new RecipeChoice.MaterialChoice(Material.NETHER_BRICK),
                 new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
@@ -143,7 +143,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Iron_NUGGET);
             // 铁粒 骨头
             SmithingRecipe Iron_GOLD = new SmithingRecipe(
-                    new NamespacedKey(this, "Iron_recipe"),
+                    new NamespacedKey(this, "Iron2_recipe"),
                     new ItemStack(Material.IRON_INGOT),
                     new RecipeChoice.MaterialChoice(Material.GOLD_INGOT),
                     new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
@@ -151,7 +151,7 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Iron_GOLD);
             // 铁锭 金锭
             SmithingRecipe Iron_NETHER_INGOT = new SmithingRecipe(
-                    new NamespacedKey(this, "Iron_recipe"),
+                    new NamespacedKey(this, "Iron3_recipe"),
                     new ItemStack(Material.IRON_INGOT),
                     new RecipeChoice.MaterialChoice(Material.NETHERITE_INGOT),
                     new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
@@ -159,21 +159,45 @@ public final class SkydomIslandManager extends JavaPlugin {
             Bukkit.addRecipe(Iron_NETHER_INGOT);
             // 铁锭 下界合金锭
             SmithingRecipe Iron_COPPER = new SmithingRecipe(
-                    new NamespacedKey(this, "Iron_recipe"),
+                    new NamespacedKey(this, "Iron4_recipe"),
                     new ItemStack(Material.IRON_INGOT),
                     new RecipeChoice.MaterialChoice(Material.COPPER_INGOT),
                     new RecipeChoice.MaterialChoice(Material.WHITE_DYE)
             );
             Bukkit.addRecipe(Iron_COPPER);
             // 铁锭 铜锭
-            SmithingRecipe Gold = new SmithingRecipe(
-                new NamespacedKey(this, "Gold_recipe"),
+            SmithingRecipe Gold_IRON = new SmithingRecipe(
+                new NamespacedKey(this, "Gold1_recipe"),
                 new ItemStack(Material.GOLD_INGOT),
                 new RecipeChoice.MaterialChoice(Material.IRON_INGOT),
                 new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
             );
-            Bukkit.addRecipe(Gold);
-            // 金锭
+            Bukkit.addRecipe(Gold_IRON);
+            // 金锭 铁锭
+            SmithingRecipe Gold_COPPER = new SmithingRecipe(
+                    new NamespacedKey(this, "Gold2_recipe"),
+                    new ItemStack(Material.GOLD_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.COPPER_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
+            );
+            Bukkit.addRecipe(Gold_COPPER);
+            // 金锭 铜锭
+            SmithingRecipe Gold_NETHER_INGOT = new SmithingRecipe(
+                    new NamespacedKey(this, "Gold3_recipe"),
+                    new ItemStack(Material.GOLD_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.NETHERITE_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
+            );
+            Bukkit.addRecipe(Gold_NETHER_INGOT);
+            // 金锭 下界合金锭
+            SmithingRecipe Gold_NETHER = new SmithingRecipe(
+                    new NamespacedKey(this, "Gold4_recipe"),
+                    new ItemStack(Material.GOLD_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.NETHER_BRICK),
+                    new RecipeChoice.MaterialChoice(Material.YELLOW_DYE)
+            );
+            Bukkit.addRecipe(Gold_NETHER);
+            // 金锭 下界砖
             SmithingRecipe Purpur_block = new SmithingRecipe(
                 new NamespacedKey(this, "purpur_block_recipe"),
                 new ItemStack(Material.PURPUR_BLOCK),
@@ -191,14 +215,22 @@ public final class SkydomIslandManager extends JavaPlugin {
             Podzalrecipe.setIngredient('B', Material.BONE_MEAL);
             Bukkit.addRecipe(Podzalrecipe);
             // 灰化土
-            SmithingRecipe Nether_INGOT = new SmithingRecipe(
-                new NamespacedKey(this, "Nether_INGOT_recipe"),
+            SmithingRecipe Nether_INGOT_GOLD = new SmithingRecipe(
+                new NamespacedKey(this, "Nether1_INGOT_recipe"),
                 new ItemStack(Material.NETHERITE_INGOT),
                 new RecipeChoice.MaterialChoice(Material.GOLD_INGOT),
                 new RecipeChoice.MaterialChoice(Material.BLACK_DYE)
             );
-            Bukkit.addRecipe(Nether_INGOT);
-            // 下界合金锭
+            Bukkit.addRecipe(Nether_INGOT_GOLD);
+            // 下界合金锭 金锭
+            SmithingRecipe Nether_INGOT_Iron = new SmithingRecipe(
+                    new NamespacedKey(this, "Nether2_INGOT_recipe"),
+                    new ItemStack(Material.NETHERITE_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.IRON_INGOT),
+                    new RecipeChoice.MaterialChoice(Material.BLACK_DYE)
+            );
+            Bukkit.addRecipe(Nether_INGOT_Iron);
+            // 下界合金锭 铁锭
             SmithingRecipe COPPER_INGOT = new SmithingRecipe(
                  new NamespacedKey(this, "COPPER_INGOT_recipe"),
                  new ItemStack(Material.COPPER_INGOT),
@@ -214,12 +246,6 @@ public final class SkydomIslandManager extends JavaPlugin {
             );
             Bukkit.addRecipe(GravelStonecuttingRecipe);
             // 沙砾 切石机
-            ItemStack Gravel = new ItemStack(Material.GRAVEL,4);
-            NamespacedKey GRAVEL_KEY = new NamespacedKey(this, "GRAVEL_KEY");
-            ShapelessRecipe GRAVELRecipe = new ShapelessRecipe(GRAVEL_KEY, Gravel);
-            GRAVELRecipe.addIngredient(4,Material.STONE);
-            Bukkit.addRecipe(GRAVELRecipe);
-            // 沙砾 工作台
             SmithingRecipe Mycelium = new SmithingRecipe(
                 new NamespacedKey(this, "mycelium_recipe"),
                 new ItemStack(Material.MYCELIUM),
@@ -236,14 +262,14 @@ public final class SkydomIslandManager extends JavaPlugin {
             );
             Bukkit.addRecipe(Grass_block);
             // 草方块
-            FurnaceRecipe DIAMOND = new FurnaceRecipe(
-                new NamespacedKey(this, "DIAMOND_recipe"),
-                new ItemStack(Material.DIAMOND),
-                Material.GOLDEN_APPLE,
-                (float) 0.2,
-                180
-            );
-            Bukkit.addRecipe(DIAMOND);
+            ItemStack DIAMOND = new ItemStack(Material.DIAMOND);
+            NamespacedKey DIAMONDkey = new NamespacedKey(this, "DIAMOND_key");
+            ShapedRecipe DIAMONDrecipe = new ShapedRecipe(DIAMONDkey, DIAMOND);
+            Podzalrecipe.shape(" G ", "NBN", " G ");
+            Podzalrecipe.setIngredient('G', Material.GOLDEN_APPLE);
+            Podzalrecipe.setIngredient('N', Material.NETHERITE_INGOT);
+            Podzalrecipe.setIngredient('B', Material.BONE_BLOCK);
+            Bukkit.addRecipe(DIAMONDrecipe);
             // 钻石
             BlastingRecipe Sand = new BlastingRecipe(
                 new NamespacedKey(this, "sand_recipe"),
@@ -254,6 +280,15 @@ public final class SkydomIslandManager extends JavaPlugin {
             );
             Bukkit.addRecipe(Sand);
             // 沙子
+            BlastingRecipe BLAZE_POWDER = new BlastingRecipe(
+                    new NamespacedKey(this, "sand_recipe"),
+                    new ItemStack(Material.BLAZE_POWDER),
+                    Material.REDSTONE,
+                    (float) 0.8,
+                    110
+            );
+            Bukkit.addRecipe(BLAZE_POWDER);
+            // 烈焰粉
             BlastingRecipe Quartz = new BlastingRecipe(
                 new NamespacedKey(this, "Quartz_recipe"),
                 new ItemStack(Material.QUARTZ),
@@ -297,6 +332,20 @@ public final class SkydomIslandManager extends JavaPlugin {
             END_STONE_recipe.setIngredient('S', Material.STONE);
             Bukkit.addRecipe(END_STONE_recipe);
             // 末地石
+            ItemStack AMETHYST_SHARD = new ItemStack(Material.AMETHYST_SHARD);
+            NamespacedKey AMETHYST_SHARD_KEY = new NamespacedKey(this, "COLA_KEY");
+            ShapelessRecipe AMETHYST_SHARDRecipe = new ShapelessRecipe(AMETHYST_SHARD_KEY, AMETHYST_SHARD);
+            AMETHYST_SHARDRecipe.addIngredient(Material.PRISMARINE_SHARD);
+            AMETHYST_SHARDRecipe.addIngredient(Material.PURPLE_DYE);
+            Bukkit.addRecipe(AMETHYST_SHARDRecipe);
+            // 紫水晶碎片
+            ItemStack BLAZE_ROD_SHARD = new ItemStack(Material.BLAZE_ROD);
+            NamespacedKey BLAZE_ROD_SHARD_KEY = new NamespacedKey(this, "BLAZE_ROD_KEY");
+            ShapelessRecipe BLAZE_RODRecipe = new ShapelessRecipe(BLAZE_ROD_SHARD_KEY, BLAZE_ROD_SHARD);
+            BLAZE_RODRecipe.addIngredient(Material.BLAZE_POWDER);
+            BLAZE_RODRecipe.addIngredient(Material.BLAZE_POWDER);
+            Bukkit.addRecipe(BLAZE_RODRecipe);
+            // 烈焰棒
             ItemStack COAL = new ItemStack(Material.COAL);
             NamespacedKey COAL_KEY = new NamespacedKey(this, "COLA_KEY");
             ShapelessRecipe COALRecipe = new ShapelessRecipe(COAL_KEY, COAL);

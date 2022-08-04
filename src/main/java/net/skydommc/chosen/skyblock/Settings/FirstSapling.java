@@ -1,4 +1,4 @@
-package tk.chosen.skyblock.Settings;
+package net.skydommc.chosen.skyblock.Settings;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-import tk.chosen.skyblock.SkydomIslandManager;
+import net.skydommc.chosen.skyblock.SkydomIslandManager;
 
 import java.util.*;
 

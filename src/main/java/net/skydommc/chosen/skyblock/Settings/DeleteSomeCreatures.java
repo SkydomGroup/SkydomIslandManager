@@ -1,4 +1,4 @@
-package tk.chosen.skyblock.Settings;
+package net.skydommc.chosen.skyblock.Settings;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;

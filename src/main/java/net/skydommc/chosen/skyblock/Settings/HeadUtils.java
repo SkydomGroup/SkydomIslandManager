@@ -1,4 +1,4 @@
-package tk.chosen.skyblock.Settings;
+package net.skydommc.chosen.skyblock.Settings;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
