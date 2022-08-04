@@ -256,6 +256,14 @@ public final class SkydomIslandManager extends JavaPlugin {
             );
             Bukkit.addRecipe(Mycelium);
             // 菌丝
+            SmithingRecipe COBBLED_DEEPSLATE = new SmithingRecipe(
+                    new NamespacedKey(this, "COBBLED_DEEPSLATE_recipe"),
+                    new ItemStack(Material.COBBLED_DEEPSLATE),
+                    new RecipeChoice.MaterialChoice(Material.COBBLESTONE),
+                    new RecipeChoice.MaterialChoice(Material.BLACK_DYE)
+            );
+            Bukkit.addRecipe(COBBLED_DEEPSLATE);
+            // 菌丝
             SmithingRecipe Grass_block = new SmithingRecipe(
                 new NamespacedKey(this, "Grass_block_recipe"),
                 new ItemStack(Material.GRASS_BLOCK),
