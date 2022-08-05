@@ -6,11 +6,13 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SynthesisCommand implements CommandExecutor, TabCompleter {
     @Override
+    @ParametersAreNonnullByDefault
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==0){
             sender.sendMessage(ChatColor.AQUA + "你输入的指令好像有问题哎，快快输入/Tips help查看帮助吧！");

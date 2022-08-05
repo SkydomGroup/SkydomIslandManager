@@ -12,3 +12,5 @@ commands:
     default: op
   Tips:
     usage: /Tips
+  Menu:
+    usage: /Menu

@@ -1,5 +1,7 @@
 package net.skydommc.chosen.skyblock;
 
+import net.skydommc.chosen.skyblock.Menu.MainMenuCommand;
+import net.skydommc.chosen.skyblock.Menu.MainMenuListener;
 import net.skydommc.chosen.skyblock.Metrics.Metrics;
 import net.skydommc.chosen.skyblock.Settings.*;
 import net.skydommc.chosen.skyblock.Tips.Synthesis;
@@ -13,6 +15,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Objects;
 
 public final class SkydomIslandManager extends JavaPlugin {
+    public static SkydomIslandManager instance;
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
@@ -124,7 +127,6 @@ public final class SkydomIslandManager extends JavaPlugin {
         }
         if (this.getConfig().getBoolean("MoreRecipe")) {
             // 自定义合成表
-            this.getLogger().info("Enabled MoreRecipe.");
             Bukkit.resetRecipes();
             // 重置合成配方
             SmithingRecipe Iron_NETHER = new SmithingRecipe(
@@ -369,19 +371,26 @@ public final class SkydomIslandManager extends JavaPlugin {
             FLINTRecipe.addIngredient(1,Material.WOODEN_SHOVEL);
             Bukkit.addRecipe(FLINTRecipe);
             // 燧石
+            this.getLogger().info("MoreRecipe Loaded Successfully");
             if (this.getConfig().getBoolean("Synthesis")) {
                 Bukkit.getPluginManager().registerEvents(new Synthesis(), this);
-                getLogger().info("Register Synthesis Success");
+                getLogger().info("Register Synthesis Successfully");
             }
             if (this.getConfig().getBoolean("BanBat")) {
                 Bukkit.getPluginManager().registerEvents(new DeleteSomeCreatures(), this);
-                getLogger().info("Register DeleteSomeCreatures Success");
+                getLogger().info("Register DeleteSomeCreatures Successfully");
             }
             int pluginId = 14293; // 接入统计系统
             Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
-            getLogger().info("Metrics Success");
+            getLogger().info("Metrics Loading Successfully");
+            Bukkit.getPluginManager().registerEvents(new MainMenuListener(), this);
+            getLogger().info("Listener Register Successfully");
             Objects.requireNonNull(Bukkit.getPluginCommand("Tips")).setExecutor(new SynthesisCommand());
             Objects.requireNonNull(Bukkit.getPluginCommand("Tips")).setTabCompleter(new SynthesisCommand());
+            Objects.requireNonNull(Bukkit.getPluginCommand("Menu")).setExecutor(new MainMenuCommand());
+            Bukkit.getPluginCommand("Menu").setExecutor(new MainMenuCommand());
+            getLogger().info("Command Loading Successfully");
+            getLogger().info("SkydomIslandManager Loaded Successfully !");
         }
     }
 
