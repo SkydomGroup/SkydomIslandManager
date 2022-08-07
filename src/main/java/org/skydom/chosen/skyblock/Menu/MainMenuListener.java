@@ -1,4 +1,4 @@
-package net.skydommc.chosen.skyblock.Menu;
+package org.skydom.chosen.skyblock.Menu;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,10 +21,9 @@ public class MainMenuListener implements Listener {
             if (clickedItem == null) {
                 return;
             }
-            if (clickedItem.getItemMeta().getDisplayName().equals(RecipeMenu.IRON)) {
-                player.closeInventory();
-                // 子类名.open((player));
-                // player.sendMessage("文字");
+            if (e.getCurrentItem().getItemMeta().getDisplayName().equals(RecipeMenu.INGOT)) {
+                // player.closeInventory();
+                // 子类.open(player)
                 return;
             }
         }

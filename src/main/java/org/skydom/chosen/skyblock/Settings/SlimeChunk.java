@@ -1,4 +1,4 @@
-package net.skydommc.chosen.skyblock.Settings;
+package org.skydom.chosen.skyblock.Settings;
 
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
-import net.skydommc.chosen.skyblock.SkydomIslandManager;
+import org.skydom.chosen.skyblock.SkydomIslandManager;
 
 import java.util.Objects;
 

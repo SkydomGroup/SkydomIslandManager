@@ -1,4 +1,4 @@
-package net.skydommc.chosen.skyblock.Tips;
+package org.skydom.chosen.skyblock.Tips;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

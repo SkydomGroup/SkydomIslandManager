@@ -1,4 +1,4 @@
-package net.skydommc.chosen.skyblock.Settings;
+package org.skydom.chosen.skyblock.Settings;
 
 public class Pair<K, V> {
     private K key;

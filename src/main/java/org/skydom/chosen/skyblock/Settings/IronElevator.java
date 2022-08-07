@@ -1,4 +1,4 @@
-package net.skydommc.chosen.skyblock.Settings;
+package org.skydom.chosen.skyblock.Settings;
 
 import com.destroystokyo.paper.event.player.PlayerJumpEvent;
 import org.bukkit.*;
@@ -8,7 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import net.skydommc.chosen.skyblock.SkydomIslandManager;
+import org.skydom.chosen.skyblock.SkydomIslandManager;
 
 public class IronElevator implements Listener {
 

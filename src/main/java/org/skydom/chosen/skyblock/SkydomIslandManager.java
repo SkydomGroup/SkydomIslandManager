@@ -1,16 +1,16 @@
-package net.skydommc.chosen.skyblock;
+package org.skydom.chosen.skyblock;
 
-import net.skydommc.chosen.skyblock.Menu.MainMenuCommand;
-import net.skydommc.chosen.skyblock.Menu.MainMenuListener;
-import net.skydommc.chosen.skyblock.Metrics.Metrics;
-import net.skydommc.chosen.skyblock.Settings.*;
-import net.skydommc.chosen.skyblock.Tips.Synthesis;
-import net.skydommc.chosen.skyblock.Tips.SynthesisCommand;
+import org.skydom.chosen.skyblock.Menu.MainMenuCommand;
+import org.skydom.chosen.skyblock.Menu.MainMenuListener;
+import org.skydom.chosen.skyblock.Metrics.Metrics;
+import org.skydom.chosen.skyblock.Tips.Synthesis;
+import org.skydom.chosen.skyblock.Tips.SynthesisCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.*;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.skydom.chosen.skyblock.Settings.*;
 
 import java.util.Objects;
 

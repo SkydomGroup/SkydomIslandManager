@@ -1,4 +1,4 @@
-package net.skydommc.chosen.skyblock.Menu;
+package org.skydom.chosen.skyblock.Menu;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -10,12 +10,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class RecipeMenu {
     public static final Inventory MainMenu;
     public static final String TITLE = "额外合成表";
-    public static final String IRON = "铁锭";
+    public static final String INGOT = "锭类";
     static {
         MainMenu = Bukkit.createInventory(null,54,TITLE);
         ItemStack Iron = new ItemStack(Material.IRON_INGOT);
         ItemMeta IronMeta = Iron.getItemMeta();
-        IronMeta.setDisplayName(IRON);
+        IronMeta.setDisplayName(INGOT);
         Iron.setItemMeta(IronMeta);
         MainMenu.setItem(0,Iron);
     }

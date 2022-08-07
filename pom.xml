@@ -53,10 +53,6 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
-        <repository>
-            <id>EssentialsX</id>
-            <url>https://repo.essentialsx.net/releases/</url>
-        </repository>
     </repositories>
 
     <dependencies>

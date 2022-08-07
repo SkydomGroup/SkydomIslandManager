@@ -1,4 +1,4 @@
-package net.skydommc.chosen.skyblock.Menu;
+package org.skydom.chosen.skyblock.Menu;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

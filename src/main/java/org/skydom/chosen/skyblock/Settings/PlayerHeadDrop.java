@@ -1,4 +1,4 @@
-package net.skydommc.chosen.skyblock.Settings;
+package org.skydom.chosen.skyblock.Settings;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.*;
@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.java.JavaPlugin;
-import net.skydommc.chosen.skyblock.SkydomIslandManager;
+import org.skydom.chosen.skyblock.SkydomIslandManager;
 
 import java.io.IOException;
 import java.io.InputStream;

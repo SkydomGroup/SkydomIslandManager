@@ -1,6 +1,6 @@
 name: SkydomIslandManager
 version: '${project.version}'
-main: net.skydommc.chosen.skyblock.SkydomIslandManager
+main: org.skydom.chosen.skyblock.SkydomIslandManager
 api-version: 1.19
 authors: [Chosen, SkydomAdminGroup]
 commands:

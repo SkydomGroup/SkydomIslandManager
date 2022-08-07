@@ -12,7 +12,7 @@
  *
  * Violations will result in a ban of your plugin and account from bStats.
  */
-package net.skydommc.chosen.skyblock.Metrics;
+package org.skydom.chosen.skyblock.Metrics;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
