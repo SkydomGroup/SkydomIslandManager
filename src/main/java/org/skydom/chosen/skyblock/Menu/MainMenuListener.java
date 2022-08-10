@@ -22,7 +22,7 @@ public class MainMenuListener implements Listener {
                 return;
             }
             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(RecipeMenu.INGOT)) {
-                // player.closeInventory();
+                player.closeInventory();
                 // 子类.open(player)
                 return;
             }
