@@ -12,4 +12,6 @@ ShulkerRespawn: true
 MoreRecipe: true
 SynthesisCommand: true
 BanBat: true
+DeepOceanGuardian: true
 Synthesis: true
+SetGameRule: true
