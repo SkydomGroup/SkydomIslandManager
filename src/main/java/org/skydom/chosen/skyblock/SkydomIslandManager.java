@@ -1,10 +1,8 @@
 package org.skydom.chosen.skyblock;
 
 import org.bukkit.*;
-import org.bukkit.plugin.Plugin;
 import org.skydom.chosen.skyblock.Menu.MainMenuCommand;
 import org.skydom.chosen.skyblock.Menu.MainMenuListener;
-import org.skydom.chosen.skyblock.Metrics.Metrics;
 import org.skydom.chosen.skyblock.Tips.Synthesis;
 import org.skydom.chosen.skyblock.Tips.SynthesisCommand;
 import org.bukkit.inventory.*;
@@ -14,14 +12,6 @@ import org.skydom.chosen.skyblock.Settings.*;
 import java.util.Objects;
 
 public final class SkydomIslandManager extends JavaPlugin {
-    public static SkydomIslandManager instance;
-
-    private static SkydomIslandManager SkydomIslandManager;
-
-    public static SkydomIslandManager getPlugin() {
-        return SkydomIslandManager;
-    }
-
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
@@ -121,7 +111,7 @@ public final class SkydomIslandManager extends JavaPlugin {
 
             }
         }
-        if (this.getConfig().getBoolean("ShulkerRespawn")) {
+        if (this.getConfig().getBoolean("SkulkerRespawn")) {
             try {
 
                 new ShulkerRespawn();
@@ -145,41 +135,8 @@ public final class SkydomIslandManager extends JavaPlugin {
             try {
 
                 for (World world : Bukkit.getWorlds()) {
-                    world.setGameRule(GameRule.ANNOUNCE_ADVANCEMENTS, false);
                     world.setGameRule(GameRule.COMMAND_BLOCK_OUTPUT, true);
-                    world.setGameRule(GameRule.DISABLE_ELYTRA_MOVEMENT_CHECK, true);
-                    world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, true);
-                    world.setGameRule(GameRule.DO_ENTITY_DROPS, true);
-                    world.setGameRule(GameRule.DO_FIRE_TICK, true);
-                    world.setGameRule(GameRule.DO_LIMITED_CRAFTING, false);
-                    world.setGameRule(GameRule.DO_MOB_LOOT, true);
-                    world.setGameRule(GameRule.DO_MOB_SPAWNING, true);
-                    world.setGameRule(GameRule.DO_TILE_DROPS, true);
-                    world.setGameRule(GameRule.DO_WEATHER_CYCLE, true);
                     world.setGameRule(GameRule.KEEP_INVENTORY, true);
-                    world.setGameRule(GameRule.LOG_ADMIN_COMMANDS, true);
-                    world.setGameRule(GameRule.MOB_GRIEFING, true);
-                    world.setGameRule(GameRule.NATURAL_REGENERATION, true);
-                    world.setGameRule(GameRule.REDUCED_DEBUG_INFO, false);
-                    world.setGameRule(GameRule.SEND_COMMAND_FEEDBACK, true);
-                    world.setGameRule(GameRule.SHOW_DEATH_MESSAGES, false);
-                    world.setGameRule(GameRule.SPECTATORS_GENERATE_CHUNKS, false);
-                    world.setGameRule(GameRule.DISABLE_RAIDS, false);
-                    world.setGameRule(GameRule.DO_INSOMNIA, false);
-                    world.setGameRule(GameRule.DO_IMMEDIATE_RESPAWN, true);
-                    world.setGameRule(GameRule.DROWNING_DAMAGE, true);
-                    world.setGameRule(GameRule.FALL_DAMAGE, true);
-                    world.setGameRule(GameRule.FIRE_DAMAGE, true);
-                    world.setGameRule(GameRule.FREEZE_DAMAGE, true);
-                    world.setGameRule(GameRule.DO_PATROL_SPAWNING, true);
-                    world.setGameRule(GameRule.DO_TRADER_SPAWNING, true);
-                    world.setGameRule(GameRule.FORGIVE_DEAD_PLAYERS, true);
-                    world.setGameRule(GameRule.UNIVERSAL_ANGER, false);
-                    world.setGameRule(GameRule.RANDOM_TICK_SPEED, 3);
-                    world.setGameRule(GameRule.SPAWN_RADIUS, 0);
-                    world.setGameRule(GameRule.MAX_ENTITY_CRAMMING, 24);
-                    world.setGameRule(GameRule.MAX_COMMAND_CHAIN_LENGTH, 65536);
-                    world.setGameRule(GameRule.PLAYERS_SLEEPING_PERCENTAGE, 0);
                     world.setDifficulty(Difficulty.HARD);
                 }
                 getLogger().info("SetGameRule Successfully");
@@ -443,15 +400,14 @@ public final class SkydomIslandManager extends JavaPlugin {
                 Bukkit.getPluginManager().registerEvents(new DeleteSomeCreatures(), this);
                 getLogger().info("Register DeleteSomeCreatures Successfully");
             }
-            int pluginId = 14293; // 接入统计系统
-            Metrics metrics= new Metrics(this, pluginId); // 接入统计系统
+            // 接入统计系统
             getLogger().info("Metrics Loading Successfully");
             Bukkit.getPluginManager().registerEvents(new MainMenuListener(), this);
             getLogger().info("Listener Register Successfully");
             Objects.requireNonNull(Bukkit.getPluginCommand("Tips")).setExecutor(new SynthesisCommand());
             Objects.requireNonNull(Bukkit.getPluginCommand("Tips")).setTabCompleter(new SynthesisCommand());
             Objects.requireNonNull(Bukkit.getPluginCommand("Menu")).setExecutor(new MainMenuCommand());
-            Bukkit.getPluginCommand("Menu").setExecutor(new MainMenuCommand());
+            Objects.requireNonNull(Bukkit.getPluginCommand("Menu")).setExecutor(new MainMenuCommand());
             getLogger().info("Command Loading Successfully");
             getLogger().info("SkydomIslandManager Loaded Successfully !");
         }
