@@ -142,7 +142,6 @@ public final class SkydomIslandManager extends JavaPlugin {
             try {
 
                 for (World world : Bukkit.getWorlds()) {
-                    world.setGameRule(GameRule.COMMAND_BLOCK_OUTPUT, true);
                     world.setGameRule(GameRule.KEEP_INVENTORY, true);
                     world.setDifficulty(Difficulty.HARD);
                 }
@@ -167,12 +166,12 @@ public final class SkydomIslandManager extends JavaPlugin {
             CampfireRecipe Iron_NUGGET = new CampfireRecipe(
                 new NamespacedKey(this, "iron_nugget_recipe"),
                 new ItemStack(Material.IRON_NUGGET),
-                Material.BONE,
+                Material.BONE_BLOCK,
                 (float) 0.2,
                 300
             );
             Bukkit.addRecipe(Iron_NUGGET);
-            // 铁粒 骨头
+            // 铁粒 骨块
             SmithingRecipe Iron_GOLD = new SmithingRecipe(
                     new NamespacedKey(this, "Ironi_recipe"),
                     new ItemStack(Material.IRON_INGOT),
