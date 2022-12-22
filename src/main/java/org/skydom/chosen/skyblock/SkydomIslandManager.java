@@ -12,6 +12,13 @@ import org.skydom.chosen.skyblock.Settings.*;
 import java.util.Objects;
 
 public final class SkydomIslandManager extends JavaPlugin {
+
+    private static SkydomIslandManager SkydomIslandManager;
+
+    public static SkydomIslandManager getPlugin() {
+        return SkydomIslandManager;
+    }
+
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
@@ -111,7 +118,7 @@ public final class SkydomIslandManager extends JavaPlugin {
 
             }
         }
-        if (this.getConfig().getBoolean("SkulkerRespawn")) {
+        if (this.getConfig().getBoolean("ShulkerRespawn")) {
             try {
 
                 new ShulkerRespawn();
