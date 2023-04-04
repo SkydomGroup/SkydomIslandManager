@@ -151,6 +151,7 @@ public final class SkydomIslandManager extends JavaPlugin {
 
             }
         }
+        // The content of MoreRecipe is very long.
         if (this.getConfig().getBoolean("MoreRecipe")) {
             // 自定义合成表
             Bukkit.resetRecipes();

@@ -1,8 +1,8 @@
 name: SkydomIslandManager
 version: '${project.version}'
 main: org.skydom.chosen.skyblock.SkydomIslandManager
-api-version: 1.19
-authors: [Chosen, SkydomAdminGroup]
+api-version: 1.19.4
+authors: [Chosen, SkydomGroup]
 commands:
   Slime:
     usage: /Slime
@@ -12,5 +12,7 @@ commands:
     default: op
   Tips:
     usage: /Tips
+    description: Look Tips
   Menu:
     usage: /Menu
+    description: Open Menu

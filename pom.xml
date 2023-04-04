@@ -6,7 +6,7 @@
 
     <groupId>org.skydom.chosen.skyblock</groupId>
     <artifactId>SkydomIslandManager</artifactId>
-    <version>2.0-SNAPSHOT</version>
+    <version>v3.4.2</version>
     <packaging>jar</packaging>
 
     <name>SkydomIslandManager</name>
@@ -45,7 +45,7 @@
         <repository>
             <id> lss233-minecraft </id>
             <name> Lss233's Minecraft Repository </name>
-            <url>http://lss233.littleservice.cn/repositories/minecraft</url>
+            <url>https://lss233.littleservice.cn/repositories/minecraft</url>
         </repository>
     </repositories>
 
@@ -53,13 +53,13 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.19.3-R0.1-SNAPSHOT</version>
+            <version>1.19.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mojang</groupId>
             <artifactId>authlib</artifactId>
-            <version>1.5.26</version>
+            <version>3.18.38</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
