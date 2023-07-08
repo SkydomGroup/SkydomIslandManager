@@ -1,7 +1,8 @@
 name: SkydomIslandManager
 version: '${project.version}'
 main: org.skydom.chosen.skyblock.SkydomIslandManager
-api-version: 1.19.4
+api-version: 1.20.1
+folia-supported: true
 authors: [Chosen, SkydomGroup]
 commands:
   Slime:
