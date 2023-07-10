@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     compileOnly("dev.folia:folia-api:1.20.1-R0.1-SNAPSHOT")
-    compileOnly("com.mojang:authlib:3.18.38")
+    compileOnly("com.mojang:authlib:4.0.43")
 }
 
 def targetJavaVersion = 17
