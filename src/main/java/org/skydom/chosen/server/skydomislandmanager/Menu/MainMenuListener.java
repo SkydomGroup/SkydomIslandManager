@@ -24,7 +24,6 @@ public class MainMenuListener implements Listener {
             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(RecipeMenu.INGOT)) {
                 player.closeInventory();
                 // 子类.open(player)
-                return;
             }
         }
     }

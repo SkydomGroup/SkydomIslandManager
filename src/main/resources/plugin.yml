@@ -1,19 +1,22 @@
-name: SkydomIslandManager
-version: ${version}
-main: org.skydom.chosen.server.skydomislandmanager.SkydomIslandManager
-api-version: 1.20.1
-folia-supported: true
-authors: [Chosen_1st]
-commands:
-  Slime:
-    usage: /Slime
-    description: Look The Slime Chunk
-    permission: SkydomIslandManager.slime
-    permission-message: You do not have permission.
-    default: op
-  Tips:
-    usage: /Tips
-    description: Look Tips
-  Menu:
-    usage: /Menu
-    description: Open Menu
+
+ name: SkydomIslandManager
+ version: \${version}
+ main: org.skydom.chosen.server.skydomislandmanager.SkydomIslandManager
+ api-version: 1.20
+ folia-supported: true
+ authors: [Chosen_1st;muchstarlight]
+ commands:
+   Slime:
+     usage: /Slime
+     description: Look The Slime Chunk
+     permission: SkydomIslandManager.slime
+     permission-message: 你没有权限
+     default: op
+   Tips:
+     usage: /Tips
+     description: Look Tips
+   Menu:
+     usage: /Menu
+     description: Open Menu
+ scription: Open Menu
+ 

@@ -130,7 +130,6 @@ public final class SkydomIslandManager extends JavaPlugin {
         }
         if (this.getConfig().getBoolean("DeepOceanGuardian")) {
             try {
-
                 new DeepOceanGuardian();
                 getLogger().info("Enabled DeepOceanGuardian.");
             } catch (Exception e) {
@@ -297,7 +296,7 @@ public final class SkydomIslandManager extends JavaPlugin {
                 new NamespacedKey(this, "Grass_block_recipe"),
                 new ItemStack(Material.GRASS_BLOCK),
                 new RecipeChoice.MaterialChoice(Material.DIRT),
-                new RecipeChoice.MaterialChoice(Material.GRASS)
+                new RecipeChoice.MaterialChoice(Material.GRASS_BLOCK)
             );
             Bukkit.addRecipe(Grass_block);
             // 草方块

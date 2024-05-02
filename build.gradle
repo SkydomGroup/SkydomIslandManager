@@ -1,10 +1,11 @@
+// 加载Java插件
 plugins {
     id 'java'
 }
-
+// 设置项目的组名和版本号
 group = 'org.skydom.chosen.server'
 version = 'v4.0.0'
-
+// 设置仓库 repositories
 repositories {
     mavenCentral()
     maven {
@@ -16,12 +17,12 @@ repositories {
         url = "https://oss.sonatype.org/content/groups/public/"
     }
 }
-
+// 设置依赖 dependencies
 dependencies {
-    compileOnly("dev.folia:folia-api:1.20.1-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
     compileOnly("com.mojang:authlib:4.0.43")
 }
-
+// 设置Java版本
 def targetJavaVersion = 17
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
@@ -31,13 +32,13 @@ java {
         toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
     }
 }
-
+// 配置Java编译任务
 tasks.withType(JavaCompile).configureEach {
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release = targetJavaVersion
     }
 }
-
+// 处理资源
 processResources {
     def props = [version: version]
     inputs.properties props
@@ -45,4 +46,12 @@ processResources {
     filesMatching('plugin.yml') {
         expand props
     }
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "utf-8"
+}
+tasks.withType(Javadoc) {
+    options.encoding = "utf-8"
 }

@@ -6,11 +6,12 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.skydom.chosen.server.skydomislandmanager.SkydomIslandManager;
 
 public class DeepOceanGuardian implements Listener {
     public DeepOceanGuardian() {
-        Bukkit.getPluginManager().registerEvents(this, SkydomIslandManager.getPlugin());
+        Bukkit.getPluginManager().registerEvents(this, JavaPlugin.getPlugin(SkydomIslandManager.class));
     }
 
     @EventHandler(ignoreCancelled = true)
